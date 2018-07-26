@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'cfehome.urls'
+ROOT_URLCONF = 'ttdirectory.urls'
 
 TEMPLATES = [
     {
