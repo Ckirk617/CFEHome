@@ -135,3 +135,5 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+X_FRAME_OPTIONS = 'ALLOW-FROM synthetic.press'
