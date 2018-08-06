@@ -18,7 +18,6 @@ from django.urls import path
 from ThinkTanks import views
 from rest_framework import routers
 from django.conf.urls import include
-from django.views.decorators.csrf import csrf_exempt
 
 router = routers.DefaultRouter()
 router.register(r'state', views.StateViewSet)
@@ -28,5 +27,5 @@ router.register(r'state', views.StateViewSet)
 urlpatterns = [
     path('',views.index),
     path('admin/', admin.site.urls),
-    path('api/', csrf_exempt(include(router.urls))),
+    path('api/', include(router.urls)),
 ]

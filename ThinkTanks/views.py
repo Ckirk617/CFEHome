@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import State, City, Organization, PolicyArea, Staff
 from rest_framework import viewsets
 from .serializers import StateSerializer
+from rest_framework.authentication import BasicAuthentication
 
 
 # Create your views here.
@@ -15,3 +16,4 @@ def detail(request, title):
 class StateViewSet(viewsets.ModelViewSet):
     queryset = State.objects.all().order_by('name')
     serializer_class = StateSerializer
+    authentication_classes = (BasicAuthentication,)
