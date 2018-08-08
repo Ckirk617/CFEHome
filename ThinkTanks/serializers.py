@@ -22,7 +22,7 @@ class StaffSerializer(serializers.ModelSerializer):
         model = Staff
         fields = ('__all__')
         
-class Organization(serializers.ModelSerializer):
+class OrganizationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Organization
         fields = ('__all__')

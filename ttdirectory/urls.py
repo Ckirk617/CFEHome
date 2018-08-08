@@ -24,7 +24,7 @@ router.register(r'state', views.StateViewSet)
 router.register(r'city', views.CityViewSet)
 router.register(r'policyarea', views.PolicyAreaViewSet)
 router.register(r'staff', views.StaffViewSet)
-router.register(r'organization', views.StaffViewSet)
+router.register(r'organization', views.OrganizationViewSet)
 
 
 
