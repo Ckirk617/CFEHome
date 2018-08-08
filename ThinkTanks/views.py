@@ -24,6 +24,6 @@ class CityViewSet(viewsets.ModelViewSet):
     authentication_classes = (BasicAuthentication,)
     
 class PolicyAreaViewSet(viewsets.ModelViewSet):
-    queryset = PolicyArea.objects.all().order_by('name')
+    queryset = PolicyArea.objects.all().order_by('topic')
     serializer_class = PolicyAreaSerializer
     authentication_classes = (BasicAuthentication,)
