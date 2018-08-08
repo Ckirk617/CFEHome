@@ -8,7 +8,7 @@ from rest_framework.authentication import BasicAuthentication
 
 # Create your views here.
 def index(request):
-    return render(request, 'ttdirectory/index.html')
+    return render(request, 'ThinkTanks/index.html')
 
 class StateViewSet(viewsets.ModelViewSet):
     queryset = State.objects.all().order_by('name')
