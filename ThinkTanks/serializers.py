@@ -7,4 +7,8 @@ class StateSerializer(serializers.ModelSerializer):
         model = State
         fields = ('__all__')
         
-    
+class CitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = City
+        fields = ('__all__')
+            

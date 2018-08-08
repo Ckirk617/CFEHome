@@ -21,6 +21,7 @@ from django.conf.urls import include
 
 router = routers.DefaultRouter()
 router.register(r'state', views.StateViewSet)
+router.register(r'city', views.CityViewSet)
 
 
 
