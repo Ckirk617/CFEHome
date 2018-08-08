@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import State, City, Organization, PolicyArea, Staff
 from rest_framework import viewsets
-from .serializers import StateSerializer, CitySerializer
+from .serializers import StateSerializer, CitySerializer, PolicyAreaSerializer
 from rest_framework.authentication import BasicAuthentication
 
 
@@ -21,4 +21,9 @@ class StateViewSet(viewsets.ModelViewSet):
 class CityViewSet(viewsets.ModelViewSet):
     queryset = City.objects.all().order_by('name')
     serializer_class = CitySerializer
+    authentication_classes = (BasicAuthentication,)
+    
+class PolicyAreaViewSet(viewsets.ModelViewSet):
+    queryset = PolicyArea.objects.all().order_by('name')
+    serializer_class = PolicyAreaSerializer
     authentication_classes = (BasicAuthentication,)

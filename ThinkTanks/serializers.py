@@ -11,4 +11,9 @@ class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
         fields = ('__all__')
+        
+class PolicyAreaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PolicyArea
+        fields = ('__all__')
             
